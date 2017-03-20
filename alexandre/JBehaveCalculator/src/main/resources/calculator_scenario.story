@@ -46,6 +46,10 @@ And the response must be SUCCESS
 
 
 Scenario: Make operation DIVISION with negative value
+Given two values 27 and -8
+When I make the operation DIVISION
+Then The result must be -3
+And the response must be SUCCESS
 
 
 Scenario: Make operation TOTO which is UNKNOWN
