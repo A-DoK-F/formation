@@ -58,6 +58,10 @@ And I should see a response EMAIL_REQUIRED
 
 
 Scenario: Create a player with mal formatted email 1
+Given a player with following information : firstName (Naby Daouda), lastName (Diakite), gender (M), email (admin)
+When I save the player with email : admin
+Then I should be able to find a player with email : admin
+And I should see a response EMAIL_MAL_FORMATTED
 
 Scenario: Create a player with mal formatted email 2
 
