@@ -83,7 +83,7 @@ Scenario : Create and Delete a player with email
 Given a player with following information : firstName (Naby Daouda), lastName (Diakite), gender (M), email (admin@formation.fr)
 When I save the player with email : admin@formation.fr
 Then I should be able to find a player with email : admin@formation.fr
-And I should see a response EMAIL_MAL_FORMATTED (Case code : 2)
+And I should see a response SUCCESS
 When I delete the player with email : admin@formation.fr
 Then I should'nt be able to find a player with email : admin@formation.fr
 And I should see a response SUCCESS (Case code : 2)
@@ -93,7 +93,7 @@ Scenario : Create and Update a player with email
 Given a player with following information : firstName (Naby Daouda), lastName (Diakite), gender (M), email (admin@formation.fr)
 When I save the player with email : admin@formation.fr
 Then I should be able to find a player with email : admin@formation.fr
-And I should see a response EMAIL_MAL_FORMATTED (Case code : 2)
+And I should see a response SUCCESS 
 When I update with following information : firstName (Naby Daouda - UPDATED), lastName (Diakite), gender (M), email (admin@formation.fr)
 Then I should'nt be able to find a player with email : admin@formation.fr
 And I should see a response SUCCESS (Case code : 2)
