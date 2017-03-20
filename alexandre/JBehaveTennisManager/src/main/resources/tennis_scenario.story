@@ -30,6 +30,11 @@ Then I should be able to find a player with email : nddiakite@formation.fr
 And I should see a response LAST_NAME_MAL_FORMATTED
 
 Scenario: Create a player with required gender
+Given a player with following information : firstName (Naby Daouda), lastName (Diakite), gender (), email (nddiakite@formation.fr)
+When I save the player with email : nddiakite@formation.fr
+Then I should be able to find a player with email : nddiakite@formation.fr
+And I should see a response GENDER_REQUIRED
+
 
 Scenario: Create a player with mal formatted gender 1
 
