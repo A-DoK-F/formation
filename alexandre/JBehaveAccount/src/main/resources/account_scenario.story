@@ -14,6 +14,7 @@ Then the first account should have 5 euros
 And the second one 0 euros
 And I should see as response NOT_ENOUGH_CREDIT
 
+
 Scenario: Move Money with amount too high
 Given an account with 2200 euros
 And another with 200 euros
@@ -31,7 +32,20 @@ And the second one 1200 euros
 And I should see as response SUCCESS
 
 Scenario: Move Money to a disabled account
+Given an account with 2200 euros
+And another with 200 euros and status INACTIVE
+When I transfer 500 euros
+Then the first account should have 2200 euros
+And the second one 200 euros
+And I should see as response TARGET_ACCOUNT_DISABLED
 
 
 Scenario: Move Money to a locked account
+Given an account with 10 euros
+And another with 0 euros and status LOCKED
+When I transfer 5 euros
+Then the first account should have 5 euros
+And the second account should be ACTIVE
+And the second one 5 euros
+And I should see as response SUCCESS
 
