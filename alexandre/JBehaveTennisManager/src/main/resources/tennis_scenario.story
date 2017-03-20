@@ -1,4 +1,9 @@
 Scenario: Create a player with valid inputs
+Given a player with following information : firstName (Naby Daouda), lastName (Diakite), gender (M), email (nddiakite@formation.fr)
+When I save the player with email : nddiakite@formation.fr
+Then I should be able to find a player with email : nddiakite@formation.fr
+And I should see a response SUCCESS
+
 
 Scenario: Create a player with required first name
 
