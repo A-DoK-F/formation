@@ -20,6 +20,10 @@ And the response must be SUCCESS
 
 
 Scenario: Make operation MULTIPLICATION
+Given two values 2 and 11
+When I make the operation MULTIPLICATION
+Then The result must be 2
+And the response must be SUCCESS
 
 
 Scenario: Make operation DIVISION with second operation 0
