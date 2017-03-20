@@ -1,4 +1,8 @@
 Scenario: Make operation ADDITION
+Given two values 15 and 7
+When I make the operation ADDITION
+Then The result must be 12
+And the response must be SUCCESS
 
 
 Scenario: Make operation SUBSTRACTION
