@@ -6,6 +6,10 @@ And the response must be SUCCESS
 
 
 Scenario: Make operation SUBSTRACTION
+Given two values 27 and 5
+When I make the operation SUBSTRACTION
+Then The result must be 22
+And the response must be SUCCESS
 
 
 Scenario: Make operation SUBSTRACTION
