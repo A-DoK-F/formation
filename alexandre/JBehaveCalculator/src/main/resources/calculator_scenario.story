@@ -27,6 +27,9 @@ And the response must be SUCCESS
 
 
 Scenario: Make operation DIVISION with second operation 0
+Given two values 2 and 0
+When I make the operation DIVISION
+Then the response must be SECOND_OPERAND_CANT_BE_ZERO
 
 
 Scenario: Make operation DIVISION with first operation 0
