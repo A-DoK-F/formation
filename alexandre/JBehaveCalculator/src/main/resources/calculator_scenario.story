@@ -52,5 +52,8 @@ Then The result must be -3
 And the response must be SUCCESS
 
 
-Scenario: Make operation TOTO which is UNKNOWN
 
+Scenario: Make operation TOTO which is UNKNOWN
+Given two values 2 and 2
+When I make the operation TOTO
+Then the response must be UKNOWN_OPERATION
