@@ -13,6 +13,10 @@ And the response must be SUCCESS
 
 
 Scenario: Make operation SUBSTRACTION
+Given two values 3 and 5
+When I make the operation SUBSTRACTION
+Then The result must be -2
+And the response must be SUCCESS
 
 
 Scenario: Make operation MULTIPLICATION
